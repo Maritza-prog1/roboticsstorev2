@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block div %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css' ) }}">
+<section>
+        <h3>Sensores </h3>
+        <div class="container-productos" id="lista-productos">
+        {% for componente in componentes %}
+            {% if componente['tipo'] == "TTL" %}
+                    <div class="card" clonclick="cargar(this)">
+                      <img src="{{componente['imagen']}}" class="card-img">
+                      <h5>{{componente['nombreComponente']}}</h5>
+                      <p>{{componente['caracteristicas']}}</p>
+                      <a href="#" class="button agregar-carrito" data-id="1">Comprar</a>
+                    </div>                
+            {% endif %}
+        {% endfor %}
+        </div>
+</section>
+{% endblock %} 

@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block div %}
+
+<div class="column">
+    <h3>lista de usuarios</h3>
+    <a href="{{url_for('registroUser')}}" class="btn btn-success">Registrar Nuevo Usuario</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID de usuario</th>
+                <th>Nombre</th>
+                <th>Password</th>
+                <th>Privilegios</th>
+                <th>Editar</th>
+                <th>Borrar</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            {% for user in cs %}
+                <tr>
+                    <td>{{user['idUser']}}</td>
+                    <td>{{user['nomUser']}}</td>
+                    <td>{{user['password']}}</td>
+                    <td>{{user['privilegios']}}</td>
+                    <td>
+                        <a class="btn btn-warning" href="/editarUser/{{user['idUser']}}">Editar</a>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" onclick="confirmaBorrar({{user['idUser']}})">Eliminar</button>
+                    </td>  
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <script>
+        function confirmaBorrar(idUser) {
+        // alert("borrar: " + id);
+            var confirma = confirm("Desea borrar el usuario " + idUser);
+            if (confirma == true){
+                window.location.assign("/eliminarUser/"+idUser);
+            }
+        }
+    </script>
+</div> 
+{% endblock %} 

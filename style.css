@@ -1,0 +1,457 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	transition: 0.7s;
+	padding: 30px 20px;
+	z-index: 10;
+}
+header.abajo{
+    background: #fff;
+    padding: 15px 15px;
+}
+
+header .logo{
+    position: relative;
+    color: #02451c;
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 1.5s;
+    text-decoration: none;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    position: relative;
+    font-family: helvetica;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #02451c;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: 0.7s;
+}
+
+        header.abajo .logo,
+		header.abajo ul li a{
+			color: #000;
+		}
+
+nav{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav > a{
+    color: #dad4d4;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.textos-titulos{
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.textos-titulos h2{
+    font-size: 50px;
+    color: #0a6d21;
+   
+}
+.textos-titulos h3{
+    font-size: 30px;
+    color: #2541cdd6;
+    font-weight: 50;
+}
+
+body {
+    position: relative;
+    margin: 100px 100px 100px 100px;
+    padding: 10px;
+    /*margin: auto;*/
+}
+
+nav{
+    position: relative;
+    width:100;
+}
+
+  .text-dark {
+    /*--bs-text-opacity: 1;
+    color: black !important;*/
+    color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+  .mi-carrusel {
+    max-width: 900px; /* Establecer el ancho máximo deseado */
+    height: 100px; /* Establecer la altura deseada */
+    margin: auto; /* Centrar el carrusel en la página */
+}
+
+#centrar{
+    margin: auto; 
+}
+
+.centrarheader{
+    position: relative;
+    margin: 5px 5px 15px 5px;
+    padding: 5px;
+}
+
+.qr{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin-left:600px;
+}
+
+.services_text{
+    /*float: left;*/
+    font-size: 40px;
+    color: #212122;
+    text-align: center;
+    text-decoration:double underline #0784e4;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, cursive;
+}
+
+#listamenu > li{
+    position: relative;
+    display:inline-block;
+    /*height: 35px;*/
+    padding: 15px 10px 0px 0px;
+    /*margin-right: 5px;*/
+}
+
+#listamenu li > ul {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    background-color: #0784e4;
+    box-shadow: 3px 3px 5px rgba(100,100,100,0.7);
+    border-radius: 0px 0px 5px 5px;
+    list-style: none;
+    z-index: 1000;
+}
+
+#listamenu li > ul > li{
+    width: 120px;
+    height: 35px;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+#listamenu li:hover ul{
+    display: block;
+}
+
+#listamenu a{
+    color:#ffffff;
+}
+
+#menuprincipal li:hover{
+    background-color:#0784e4;
+    display: block;
+}
+
+.circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-left:40px;
+}
+
+.inicio{
+    width: 130px;
+    height: 100px;
+    float: right;
+}
+
+.iniciarsesion{
+    float: right;
+}
+
+.imagenesBase{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+
+/*estilos para imagenes*/
+
+.polaroid {
+    width: 30%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+.polaridad_img {
+    width: 100%;
+}
+.polaridad_img_contenedor {
+   text-align: center;
+    padding: 10px 20px; 
+  }
+
+.posicion{
+    margin: 0;
+	padding: 0;
+	font-size: 1em;
+	line-height: 1.5em;
+	padding-top: 200px; /* Relleno superior igual a la altura de la cabecera*/
+}
+
+.main-header {
+    position: absolute;
+}
+
+.zona1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+}
+
+.altura{
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    background: url(https://img.freepik.com/vector-gratis/fondo-blanco-gris-brillante-lineas-onduladas_1017-25101.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0,9;
+}
+
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+.espacio{
+        position: relative;
+        min-height: 100vh;
+        flex: 1;
+}
+
+.datos{
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    margin-left:40px;
+}
+
+.galeria{
+    display: flex;
+   justify-content: space-between;
+}
+
+/***___________**/
+/*productos-modal*/
+.modal{
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(0,0,0,0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.modal-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.modal-img{
+    width: 50%;
+}
+.modal-boton{
+    position: absolute;
+    top: 10px;
+    right:10px;
+    color:white;
+    cursor: pointer;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background:#DF691A;
+    font-size: 2em;
+    text-align: center;
+    border-radius: 50%;
+    font-family: monospace;
+}
+.modal-open{
+    display: block;
+}
+
+
+/*productos-card*/
+.container-productos{
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+.container-productos .card{
+    width: 260px;
+    height: 390px;
+    background: #4E5D6C;
+    color:#f2f2f2;
+    border-radius: 8px;
+    border:1px solid  #DF691A;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    align-items: center;
+    transition: all 0.25s;
+}
+.container-productos .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+}
+.container-productos .card img{
+    width: 260px;
+    height: 190px;
+    cursor: pointer;
+}
+.container-productos .card h5{
+    font-weight: 600;
+    padding: 5px;
+}
+.container-productos .card p{
+    padding-top: 5px;
+}
+.container-productos .card a{
+    padding:10px;
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+
+/**___pie de pagina____*/
+/*footer*/
+.footer-menu ul {
+    margin: 0px;
+    padding: 0px;
+}
+.container-footer {
+    max-width: 1140px;
+}
+.copyright-area{
+  background: #202020;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #ff5e14;
+  text-decoration: none;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #ff5e14;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+  text-decoration: none;
+}
+.row-footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.text-lg-left {
+    text-align: left !important;
+}
+.text-right {
+    text-align: right !important;
+}
+.col-xl-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.d-lg-block {
+    display: block !important;
+}
+
+.col-xl-6{
+	    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.container-footer {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+

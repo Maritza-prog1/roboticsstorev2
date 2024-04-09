@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block div %}
+
+<div class="column">
+    <h3 class="is-size-3">Editar componentes</h3>
+            <form action="{{url_for('actualizarComponente')}}" method="POST">
+                <label for="idUser">Id de Componente:</label>
+                <input required type="text" class="input" name="idcomponente" id="idcomponente" value="{{componente['idcomponente']}}">
+                <label for="nombre">Nombre:</label>
+                <input required type="text" class="input" name="nombreComponente" id="nombreComponente" value="{{componente['nombreComponente']}}">
+                <label for="caracteristicas">Caracteristicas</label>
+                <input required type="text" class="input" name="caracteristicas" id="caracteristicas" value="{{componente['caracteristicas']}}">
+                <label for="precioUnitario">Precio Unitario</label>
+                <input required type="number" class="input" name="precioUnitario" id="precioUnitario" value="{{componente['precioUnitario']}}">
+                <label for="cantidad">Cantidad</label>
+                <input required type="number" class="input" name="cantidad" id="cantidad" value="{{componente['cantidad']}}">
+                <label for="imagen">Imagen</label>
+                <input required type="text" class="input" name="imagen" id="imagen" value="{{componente['imagen']}}">
+                <label for="tipo">Tipo</label>
+                <input required type="text" class="input" name="tipo" id="tipo" value="{{componente['tipo']}}">
+                <button type="submit" class="button is-success mt-2">Guardar</button>
+            </form>
+</div>
+
+{% endblock %}

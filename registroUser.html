@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block div %}
+<div>
+    <h3 class="is-size-3">Agregar Usuario</h3>
+            <form action="{{url_for('registroUser')}}" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input required type="text" class="input" placeholder="Nombre" name="nomUser" id="nomUser">
+                <label for="Password">Password</label>
+                <input required type="password" class="input" placeholder="Password" name="password" id="password">
+                <label for="privilegios">Privilegios</label>
+                <input required type="number" class="input" placeholder="Privilegios" name="privilegios" id="privilegios">
+                <button type="submit" class="button is-success mt-2">Guardar</button>
+            </form>
+</div>
+{% endblock %} 

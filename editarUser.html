@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block div %}
+
+<div class="column">
+    <h3 class="is-size-3">Editar usuarios</h3>
+            <form action="{{url_for('actualizarUser')}}" method="POST">
+                <label for="idUser">Id de Usuario:</label>
+                <input required type="text" class="input" name="idUser" id="idUser" value="{{usuario['idUser']}}">
+                <label for="nombre">Nombre:</label>
+                <input required type="text" class="input" name="nomUser" id="nomUser" value="{{usuario['nomUser']}}">
+                <label for="Password">Password</label>
+                <input required type="password" class="input" name="password" id="password" value="{{usuario['password']}}">
+                <label for="privilegios">Privilegios</label>
+                <input required type="number" class="input" name="privilegios" id="privilegios" value="{{usuario['privilegios']}}">
+                <button type="submit" class="button is-success mt-2">Guardar</button>
+            </form>
+</div>
+
+{% endblock %}

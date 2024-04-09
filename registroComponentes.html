@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block div %}
+<div>
+    <h3 class="is-size-3">Registro de Componentes</h3>
+            <form action="{{url_for('registroComponentes')}}" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input required type="text" class="input" placeholder="Nombre" name="nombreComponente" id="nombreComponente">
+                <label for="caracteristicas">Caracteristicas</label>
+                <input required type="text" class="input" placeholder="Caracteristicas" name="caracteristicas" id="caracteristicas">
+                <label for="precioUnitario">Precio Unitario</label>
+                <input required type="number" class="input" placeholder="Precio Unitario" name="precioUnitario" id="precioUnitario">
+                <label for="cantidad">Cantidad</label>
+                <input required type="number" class="input" placeholder="Cantidad" name="cantidad" id="cantidad">
+                <label for="imagen">Imagen</label>
+                <input required type="text" class="input" placeholder="Imagen" name="imagen" id="imagen">
+                <label for="tipo">Categoría</label>
+                <!--<input required type="text" class="tipo" placeholder="Tipo" name="tipo" id="tipo">-->
+                <select required type="select" class="input" name="tipo" id="tipo">
+                    <option value="Sensores">Sensores</option>
+                    <option value="Motores" selected>Motores</option>
+                    <option value="Arduinos">Placa Arduino</option>
+                    <option value="TTL">TTL</option>
+                    <option value="CPLD">CPLD</option>
+                    <option value="FPGA">FPGA</option>
+                    <option value="Educacionales">Kit´s Educacionales</option>
+                </select>
+                <button type="submit" class="button is-success mt-2">Guardar</button>
+            </form>
+</div>
+{% endblock %} 

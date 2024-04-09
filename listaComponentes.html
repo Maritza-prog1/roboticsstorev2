@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{% block div %}
+
+<div class="column">
+    <h3>Lista de Componentes </h3>
+    <a href="{{url_for('registroComponentes')}}" class="btn btn-success">Registrar nuevo Componente</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id Componente </th>
+                <th>Nombre</th>
+                <th>Caracteristicas</th>
+                <th>Precio Unitario</th>
+                <th>Cantidad</th>
+                <th>Imagen</th>
+                <th>Tipo</th>
+                <th>Editar</th>
+                <th>Borrar</th>
+            </tr>
+        </thead>
+       <tbody class="table-group-divider">
+            {% for componente in componentes %}
+                <tr>
+                    <td>{{componente['idcomponente']}}</td>
+                    <td>{{componente['nombreComponente']}}</td>
+                    <td>{{componente['caracteristicas']}}</td>
+                    <td>{{componente['precioUnitario']}}</td>
+                    <td>{{componente['cantidad']}}</td>
+                    <td><img src="{{componente['imagen']}}" class="imagenesBase"></td>
+                    <td>{{componente['tipo']}}</td>
+                    <td>
+                      <a class="btn btn-warning" href="/editarComponente/{{componente['idcomponente']}}">Editar</a>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" onclick="confirmaBorrar({{componente['idcomponente']}})">Eliminar</button>
+                    </td>  
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <script>
+        function confirmaBorrar(idcomponente) {
+        // alert("borrar: " + id);
+            var confirma = confirm("Desea borrar el componente " + idcomponente);
+            if (confirma == true){
+                window.location.assign("/eliminarComponente/"+idcomponente);
+            }
+        }
+    </script>
+</div> 
+{% endblock %} 
